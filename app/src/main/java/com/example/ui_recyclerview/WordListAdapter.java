@@ -69,6 +69,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
             // Notify the adapted, that the data has changed so it can update the RecyclerView
             // to display the data.
             mAdapter.notifyDataSetChanged();
+
         }
     }
 

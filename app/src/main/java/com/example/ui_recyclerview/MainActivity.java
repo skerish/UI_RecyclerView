@@ -68,8 +68,17 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            mWordList.removeLast();
-            mRecyclerView.getAdapter().notifyItemRemoved(mWordList.size());
+            mWordList.clear();
+            for (int i = 0; i < 20; i++) {
+                mWordList.add("word " + i);
+            }
+            mRecyclerView.smoothScrollToPosition(0);
+            mRecyclerView.getAdapter().notifyDataSetChanged();
+//            for (int i = 0; i < count; i++) {
+//                mWordList.removeLast();
+//                mRecyclerView.getAdapter().notifyItemRemoved(mWordList.size());
+//            }
+//            count = 0;
             return true;
         }
 
